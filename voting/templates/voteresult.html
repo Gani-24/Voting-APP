@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Example</title>
+
+<!-- CSS -->
+<style>
+.myTableBg2 { 
+  width: 100%;
+  text-align: left;
+  background-color: #d9d299;
+  }
+</style>
+
+</head>
+<body>
+
+<!-- HTML -->
+<table class="Results">
+    <title>The Voting Results</title>
+	<tr>
+		<th>Candidate</th>
+		<th>Position</th>
+        <th>Votes Received</th>
+	</tr>
+    {% for i in obj %}
+    <tr>
+      <td>{{ i.name }}</td>
+      <td>{{ i.position }}</td>
+      <td>{{ i.total_vote }}</td>
+    </tr>
+  {% endfor %}	
+</table>
+
+</body>
+</html>
