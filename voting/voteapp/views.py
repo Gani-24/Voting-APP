@@ -38,7 +38,8 @@ def LoginPage(request):
             login(request,usrr)
             return redirect('home')
         else:
-            return HttpResponse ("Username or Password is incorrect!!!")
+            messages.warning(request,'Username or Password is Incorrect!')
+            return redirect('login')                
     return render (request,'login.html')
         
 
