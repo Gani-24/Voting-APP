@@ -18,7 +18,8 @@ from django.urls import path
 from voteapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.SignupPage,name='signup'),
+    path('',views.LandingPage,name='landing'),
+    path('signup/',views.SignupPage,name='signup'),
     path('login/',views.LoginPage,name='login'),
     path('home/',views.HomePage,name='home'),
     path('logout/',views.LogoutPage,name='logout'),

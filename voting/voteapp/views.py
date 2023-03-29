@@ -15,6 +15,9 @@ ref=db.reference('votes')
 def HomePage(request):
     return render (request,'home.html')
 
+def LandingPage(request):
+    return render (request,'homepage.html')
+
 def SignupPage(request):
     if request.method=='POST':
         usname=request.POST.get('username')
@@ -52,10 +55,10 @@ def VotingPage(request, pos):
             temp2.save()
             temp.status = True
             temp.save()
-            send_vote_to_firebase(candidate_name=temp2.name, position_name=obj.title)
+            send_vote_to_firebase(candidate_name=temp2.name, position_name=obj.title,noofvotes=temp2.total_vote)
             return HttpResponseRedirect('/voteresult/')
         else:
-            messages.success(request, 'you have already been voted this position.')
+            messages.success(request, 'You Have Already Voted for this Title.')
             return render(request, 'votecandi.html', {'obj':obj})
         
     else:
@@ -73,13 +76,14 @@ def VoteResultPage(request):
     obj = Candidate.objects.all().order_by('position','-total_vote')
     return render(request, "voteresult.html", {'obj':obj})
 
-def send_vote_to_firebase(candidate_name, position_name):
-    ref = db.reference('votes')  # Create a reference to the 'votes' node
-    new_vote_ref = ref.push()  # Generate a new unique key for the vote
+def send_vote_to_firebase(candidate_name, position_name ,noofvotes):
+    ref = db.reference('votes')  # Created a reference to the 'votes' node
+    new_vote_ref = ref.push()  # Generating  a new unique key for the vote by the user
     new_vote_ref.set({
         'candidate_name': candidate_name,
-        'position_name': position_name
-    })  # Set the candidate and position names as the vote data
+        'position_name': position_name,
+        'Live_Votes':noofvotes,
+    })  # Setting the value of the new vote node to the data we want to store
 
 def LogoutPage(request):
     logout(request)
