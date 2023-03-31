@@ -99,6 +99,7 @@ python3 manage.py runserver
 
 ```
 and go to the server given in the terminal
+**after selecting a candidate and vote is clicked one time in the voting page, wait for a few seconds for the results page to load, as it takes a few seconds for the data to be sent to firebase**
 
 ## 🔗 Resources I used
 - https://www.youtube.com/watch?v=rHux0gMZ3Eg
