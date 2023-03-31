@@ -1,4 +1,4 @@
-##Problems
+## Problem
 - Was Not able to Host the webapp, tried many things like pythonanywhere and railway, (Hosting was the thing that took so much time)
 - So i Created a new repo (https://github.com/Gani-24/myVoting) and uploaded all the same files and removed the Firebase Functionality, and was able to host the app in railway ,but that had errors as well, the link i provided in the mail is for that website
 - So i wasnt able to host the website. Can check the working of the webapp locally.
