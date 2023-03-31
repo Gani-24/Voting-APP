@@ -111,3 +111,7 @@ and go to the server given in the terminal
 - https://www.youtube.com/watch?v=-qfEOE4vtxE (someparts of this)
 ----
 * There were other small issues for which i Googled  as well.
+
+## Problems
+- Was Not able to Host the webapp, tried many things like pythonanywhere and railway,
+- tried linking with pythonanywhere and vercel but none of them worked.
