@@ -50,6 +50,7 @@ I devoted a significant portion of my time to working on the backend (Django) si
 
 
 
+
 ## Flow of the Web-APP(From the User Side)
 
 - User Goes to our website
@@ -90,3 +91,22 @@ I devoted a significant portion of my time to working on the backend (Django) si
 - Admin can see the live update in the Firebase Realtime database
 ![firebase](voting/screenshots/firebase.png)
 
+## How to Run the Project
+- After cloning the repo, go to the virtual env where django is installed 
+and run
+```
+python3 manage.py runserver
+
+```
+and go to the server given in the terminal
+
+## 🔗 Resources I used
+- https://www.youtube.com/watch?v=rHux0gMZ3Eg
+- https://www.youtube.com/watch?v=jBzwzrDvZ18 (Select Parts of this Video)
+- https://docs.djangoproject.com/en/4.1/ref/contrib/admin/
+- https://www.section.io/engineering-education/integrating-firebase-database-in-django/
+- https://www.youtube.com/watch?v=-IVtds5ufLY
+- https://getbootstrap.com/docs/5.0/getting-started/introduction/
+- https://www.youtube.com/watch?v=-qfEOE4vtxE (someparts of this)
+----
+* There were other small issues for which i Googled  as well.
