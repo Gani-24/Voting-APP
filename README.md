@@ -114,4 +114,8 @@ and go to the server given in the terminal
 
 ## Problems
 - Was Not able to Host the webapp, tried many things like pythonanywhere and railway,
-- tried linking with pythonanywhere and vercel but none of them worked.
+- So i Created a new repo (https://github.com/Gani-24/myVoting) and uploaded all the same files and removed the Firebase Functionality, and was able to host the app.
+- for the firebase functionality to work, have to clone this repo and run it locally
+
+
+
