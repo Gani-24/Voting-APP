@@ -1,3 +1,8 @@
+##Problems
+- Was Not able to Host the webapp, tried many things like pythonanywhere and railway, (Hosting was the thing that took so much time)
+- So i Created a new repo (https://github.com/Gani-24/myVoting) and uploaded all the same files and removed the Firebase Functionality, and was able to host the app in railway ,but that had errors as well, the link i provided in the mail is for that website
+- So i wasnt able to host the website. Can check the working of the webapp locally.
+
 
 # My Voting-APP
 
@@ -5,11 +10,9 @@ A website which allows users to vote given multiple choices
 ## Technology Used
 Backend - For Backend I used Django
 
-Frontend - For Frontend I used Bootstrap
+Frontend - For Frontend I used HTML5,Bootstrap
 
 --------
-
-
 
 
 ## Features of the APP(User side)
@@ -95,7 +98,7 @@ I devoted a significant portion of my time to working on the backend (Django) si
 - After cloning the repo, go to the virtual env where django is installed 
 and run the command
 ```
-python3 manage.py runserver
+python manage.py runserver
 
 ```
 and go to the server given in the terminal
@@ -111,11 +114,4 @@ and go to the server given in the terminal
 - https://www.youtube.com/watch?v=-qfEOE4vtxE (someparts of this)
 ----
 * There were other small issues for which i Googled  as well.
-
-## Problems
-- Was Not able to Host the webapp, tried many things like pythonanywhere and railway,
-- So i Created a new repo (https://github.com/Gani-24/myVoting) and uploaded all the same files and removed the Firebase Functionality, and was able to host the app.
-- for the firebase functionality to work, have to clone this repo and run it locally
-
-
 
