@@ -93,7 +93,7 @@ I devoted a significant portion of my time to working on the backend (Django) si
 
 ## How to Run the Project
 - After cloning the repo, go to the virtual env where django is installed 
-and run
+and run the command
 ```
 python3 manage.py runserver
 
