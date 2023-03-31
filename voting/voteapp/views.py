@@ -7,7 +7,6 @@ from .models import Candidate,ControlVote,Position
 from django.contrib import messages
 from firebase_admin import db
 ref=db.reference('votes')
-# Create your views here.
 
 
 
@@ -18,7 +17,7 @@ def HomePage(request):
 def LandingPage(request):
     return render (request,'homepage.html')
 
-def SignupPage(request):
+def SignupPage(request):   #Getting the data from the user and saving it in the database(Django)
     if request.method=='POST':
         usname=request.POST.get('username')
         email=request.POST.get('email')
@@ -29,34 +28,34 @@ def SignupPage(request):
     
     return render (request,'signup.html')
 
-def LoginPage(request):
+def LoginPage(request): #Getting the data from the user and Checking if the user is in the database(Django)
     if request.method == 'POST':
         username=request.POST.get('ussname')
         passwd=request.POST.get('passww')
-        usrr=authenticate(request,username=username,password=passwd)
+        usrr=authenticate(request,username=username,password=passwd) #authenticating the user
         if usrr is not None:
             login(request,usrr)
             return redirect('home')
         else:
-            messages.warning(request,'Username or Password is Incorrect!')
+            messages.warning(request,'Username or Password is Incorrect!') #Warning message on top of the webpage if username or password is incorrect
             return redirect('login')                
     return render (request,'login.html')
         
 
 @login_required
-def VotingPage(request, pos):
+def VotingPage(request, pos): 
     obj = get_object_or_404(Position, pk = pos)
     if request.method == "POST":
 
         temp = ControlVote.objects.get_or_create(user=request.user, position=obj)[0]
 
         if temp.status == False:
-            temp2 = Candidate.objects.get(pk=request.POST.get(obj.title))
+            temp2 = Candidate.objects.get(pk=request.POST.get(obj.title)) #Getting the Vote from the User
             temp2.total_vote += 1
             temp2.save()
             temp.status = True
             temp.save()
-            send_vote_to_firebase(candidate_name=temp2.name, position_name=obj.title,noofvotes=temp2.total_vote)
+            send_vote_to_firebase(candidate_name=temp2.name, position_name=obj.title,noofvotes=temp2.total_vote) #Sending the vote to the firebase Realtime database
             return HttpResponseRedirect('/voteresult/')
         else:
             messages.success(request, 'You Have Already Voted for this Title.')
