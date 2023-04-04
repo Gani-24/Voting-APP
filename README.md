@@ -1,7 +1,7 @@
 ## Problem
 - Was Not able to Host the webapp, tried many things like pythonanywhere and railway (had problem with firebase while hosting), (Hosting was the thing that took so much time)
 
-- So i Created a new repo (https://github.com/Gani-24/myVoting) and uploaded all the same files and removed the Firebase Functionality(Even without the Firebase Functionality the app works and completes all the requirements(i.e Storing the Votes for each candidates etc.) and hosted that on railway and it worked, the link i provided in the mail is for that website(myvoting-production.up.railway.app), its actually the same app, so the data from that website will get stored in the same django admin panel(Votes, Users and Candidates and stuff).
+- So i Created a new repo (https://github.com/Gani-24/myVoting) and uploaded all the same files and removed the Firebase Functionality(Even without the Firebase Functionality the app works and completes all the requirements(i.e Storing the Votes for each candidates etc.) and hosted that on railway and it worked, the link i provided in the mail is for that website(https://myvoting-production.up.railway.app/), its actually the same app, so the data from that website will get stored in the same django admin panel(Votes, Users and Candidates and stuff).
 
 - Using Firebase i added the extra feature of storing the live votes received for whom and which position(showed in screenshot), So for the hosted website it also works perfectly fullfilling the requirements but without the firebase feature.
 For the Firebase Feature have to Clone this current repo and run the server locally and that will work.
