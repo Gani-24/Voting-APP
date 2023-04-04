@@ -5,6 +5,7 @@
 
 - Using Firebase i added the extra feature of storing the live votes received for whom and which position(showed in screenshot), So for the hosted website it also works perfectly fullfilling the requirements but without the firebase feature.
 For the Firebase Feature have to Clone this current repo and run the server locally and that will work.
+*This Current Repo Has even firebase working, so can check this locally*
 
 
 # My Voting-APP
